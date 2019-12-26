@@ -25,7 +25,7 @@ void xnn_math_f32_sigmoid__sse2_p5_div(
   // The largest x for which sigmoidf(x) is not equal 1.0.
   const __m128 vone_cutoff = _mm_set1_ps(0x1.154244p+4f);
   const __m128 vlog2e = _mm_set1_ps(0x1.715476p+0f);
-  // Last 8 bits are zeroes
+  // Last 7 bits are zeroes
   const __m128 vminus_ln2_hi = _mm_set1_ps(-0x1.62E400p-1f);
   const __m128 vminus_ln2_lo = _mm_set1_ps(-0x1.7F7D1Cp-20f);
   const __m128 vone = _mm_set1_ps(1.0f);
